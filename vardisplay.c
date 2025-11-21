@@ -1,17 +1,17 @@
-#include<stdio.h>
-#include<stdarg.h>
+#include <stdio.h>
+#include <stdarg.h>
 void display(int count, ...)
 {
     va_list list;
-    va_start(list,count);
-    for (int i=1; i<=count; i++)
+    va_start(list, count);
+    for (int i = 1; i <= count; i++)
     {
-        int n=va_arg (list,int);
-        printf("%d",n);
+        int n = va_arg(list, int);
+        printf("%d", n);
     }
     va_end(list);
 }
 void main()
 {
-    display(5,2,3,4,6,5);
+    display(5, 2, 3, 4, 6, 5);
 }
